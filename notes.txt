@@ -1,0 +1,5 @@
+npm install express
+npm nodemon
+"start": "nodemon index.js" /* "start": "node --watch index.js"*/
+
+npm install pg
