@@ -39,7 +39,7 @@ const enviarRequisicaoPost = (url, dados) => {
             if (error) {
                 console.error('Erro na requisição:', error);
             } else {
-                console.log('Resposta do servidor:', body);
+                //console.log('Resposta do servidor:', body);
             }
         }
     );
