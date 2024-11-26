@@ -36,7 +36,7 @@ app.delete('/cliente/:id', async (request,response) => {
     const {id} = request.params
 
     const clientes = await pool.query('DELETE FROM clientes WHERE id = $1',[id])
-    return response.status(200).send()
+    return response.status(204).send()
 }) 
 
 app.listen(3001, () => {
