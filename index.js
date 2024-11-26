@@ -30,6 +30,13 @@ app.put('/cliente/:id', async (request,response) => {
     const {id} = request.params
     const clientes = await pool.query('UPDATE clientes SET nome = $1, email = $2, telefone = $3 WHERE id = $4',[nome,email,telefone,id])
     return response.status(200).send()
+})
+
+app.delete('/cliente/:id', async (request,response) => {
+    const {id} = request.params
+
+    const clientes = await pool.query('DELETE FROM clientes WHERE id = $1',[id])
+    return response.status(200).send()
 }) 
 
 app.listen(3001, () => {
